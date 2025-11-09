@@ -1,0 +1,214 @@
+/* === TEMA MATRIX === */
+:root {
+    --matrix-green: #00ff41;
+    --matrix-dark: #0a0a0a;
+    --matrix-darker: #000000;
+    --matrix-gray: #1a1a1a;
+    --matrix-text: #cccccc;
+}
+
+body {
+    background-color: var(--matrix-darker);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 65, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 255, 65, 0.03) 0%, transparent 20%);
+    color: var(--matrix-text);
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efecto de lluvia de código (opcional) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 65, 0.03) 2px,
+        rgba(0, 255, 65, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid var(--matrix-green);
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Encabezado estilo Matrix */
+.matrix-header {
+    text-align: center;
+    border-bottom: 2px solid var(--matrix-green);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.matrix-header h1 {
+    color: var(--matrix-green);
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    letter-spacing: 2px;
+}
+
+.matrix-header p {
+    color: var(--matrix-text);
+    font-size: 1.1em;
+    margin: 10px 0 0 0;
+}
+
+/* Navegación estilo terminal */
+.matrix-nav {
+    background: var(--matrix-gray);
+    border: 1px solid var(--matrix-green);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.matrix-nav h2 {
+    color: var(--matrix-green);
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--matrix-green);
+    padding-bottom: 5px;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.nav-card {
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    padding: 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.nav-card:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: var(--matrix-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
+}
+
+.nav-card h3 {
+    color: var(--matrix-green);
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.nav-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-card li {
+    margin: 5px 0;
+}
+
+.nav-card a {
+    color: var(--matrix-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-card a:hover {
+    color: var(--matrix-green);
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+/* Contenido principal */
+.content {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Bloques de código estilo terminal */
+pre {
+    background: var(--matrix-darker) !important;
+    border: 1px solid var(--matrix-green) !important;
+    border-left: 4px solid var(--matrix-green) !important;
+    color: var(--matrix-green) !important;
+    padding: 15px !important;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+code {
+    background: rgba(0, 255, 65, 0.1) !important;
+    color: var(--matrix-green) !important;
+    padding: 2px 6px !important;
+    border-radius: 3px;
+}
+
+/* Enlaces */
+a {
+    color: var(--matrix-green);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--matrix-green);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.7);
+    border-bottom: 1px solid var(--matrix-green);
+}
+
+/* Footer estilo Matrix */
+.matrix-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid var(--matrix-green);
+    color: var(--matrix-text);
+    font-size: 0.9em;
+}
+
+/* Efectos de brillo */
+.glow {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .nav-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .matrix-header h1 {
+        font-size: 2em;
+    }
+}
