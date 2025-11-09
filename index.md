@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔒 ASIX Ciberseguridad - Matrix</title>
-    <link rel="stylesheet" href="assets/css/matrix.css">
+    <link rel="stylesheet" href="/assets/css/matrix.css">
 </head>
 <body>
     <div class="container">
@@ -57,12 +57,12 @@
                 <li>Scripts y configuraciones de red</li>
             </ul>
 
-            <div class="nav-card" style="margin-top: 30px;">
+		 <div class="nav-card" style="margin-top: 30px;">
                 <h3>💾 COMANDOS RECIENTES</h3>
                 <pre><code>$ git commit -m "Inicializado sistema Matrix"
 $ hugo new guias/pihole.md
 $ sudo iptables -L -v</code></pre>
-            </div>
+            </div>           
         </main>
 
         <footer class="matrix-footer">
